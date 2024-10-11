@@ -145,28 +145,42 @@ button:hover {
     background-color: tomato;
 }
 
-/* Адаптивность */
+/* Адаптивные стили */
 @media (max-width: 800px) {
-    .menu-grid {
+    .dishes {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
-    h1 {
-        text-align: center;
+    .dishes {
+        grid-template-columns: 1fr;
     }
 
-    nav {
+    nav ul {
         flex-direction: column;
         align-items: center;
     }
 
-    nav a {
-        font-size: 28px;
+    nav ul li {
+        margin: 10px 0;
     }
 
-    .menu-grid {
-        grid-template-columns: 1fr;
+    h1 {
+        text-align: center;
     }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }

@@ -145,7 +145,7 @@ button:hover {
     background-color: tomato;
 }
 
-/* Адаптивные стили */
+/* Адаптивность */
 @media (max-width: 800px) {
     .dishes {
         grid-template-columns: repeat(2, 1fr);

@@ -1,18 +1,43 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
+/* Общие стили для шрифта */
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+/* Стили для хедера */
+header {
+    font-size: 20px;
+    text-align: center;
+    background-color: rgb(40, 38, 38);
+    color: white;
+    width: auto;
+    height: 100px;
+    padding: 15px 0;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Навигация в хедере */
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
     background-color: rgb(40, 38, 38);
-    padding: 15px;
+    padding: 10px 0;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
 }
 
 nav a.active {
@@ -23,36 +48,92 @@ nav a:hover {
     color: red;
 }
 
-header{
-    font-size: 20px;
+/* Стили для контента страницы */
+main {
+    padding: 20px;
+}
+
+/* Стили для футера */
+footer {
+    background-color: black;
+    color: red;
     text-align: center;
-    background-color: rgb(40, 38, 38);
+    padding: 15px 0;
+    font-size: 1.5rem;
+}
+
+#phone {
     color: white;
-    width: auto;
-    height: 100px;
+    font-size: 1.2rem;
 }
 
-.HL{
+#lunches {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    margin: 30px 0;
+    text-align: center;
+  }
+  
+  #lunches h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .lunch-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .lunch-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    max-width: 200px;
+  }
+  
+  .dish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .dish img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+  }
+  
+  .dish p {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .dessert {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 13px;
+    color: #666;
+  }
+.HL {
+    color: white;
     text-decoration: none;
-    color: white; 
 }
 
-.HL:hover{
+.HL:hover {
     color: red;
 }
 
-.otstup{
-    margin: 10px;
-    padding: 5px;
-}
-
-.OtstupList{
-    margin: 20px;
-    padding: 5px;
-}
-
-.EdaPict{  
-    
+/* Стили для изображения */
+.EdaPict {
     width: auto;
     height: 400px;
     margin: 5px;
@@ -61,70 +142,95 @@ header{
     display: block;
 }
 
-body{
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-  font-style: normal;
-  font-size: 24px;
+/* Стили для списка */
+.otstup {
+    margin: 10px;
+    padding: 5px;
 }
 
-.Tablepopular,th,td{  
+.OtstupList {
+    margin: 20px;
+    padding: 5px;
+}
+
+/* Стили для таблицы */
+.Tablepopular,
+th,
+td {
     border: 2px solid;
-    border-collapse:collapse;
+    border-collapse: collapse;
     width: auto;
     text-align: left;
     margin: 30px;
 }
 
-th,td{
+th,
+td {
     padding: 5px;
 }
 
-footer{
-    background-color: black;
-    font-size: 40px;
-    color: red;
-    width: auto;
-    height: 60px;
-}
-
-#phone{
-    color: white;
-    margin: 5px;
-}
-
-
-h2{
-    font-size: 40px;
-}
-
-/* Адаптивность */
+/* Адаптивность для экрана шириной 800px */
 @media (max-width: 800px) {
-    .menu-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    h1 {
-        text-align: center;
+    .EdaPict {
+        width: 100%;
+        height: auto;
     }
 
     nav {
         flex-direction: column;
-        align-items: center;
     }
 
     nav a {
-        font-size: 28px;
+        font-size: 24px;
     }
 
-    .menu-grid {
-        grid-template-columns: 1fr;
+    .Tablepopular th,
+    .Tablepopular td {
+        font-size: 1.2rem;
     }
 }
 
+/* Адаптивность для экрана шириной 600px */
+@media (max-width: 600px) {
+    .EdaPict {
+        width: 500px;
+        height: 300px;
+        margin-top: 110px;
+    }
 
+    header h1 {
+        font-size: 1.5rem;
+    }
 
+    nav a {
+        font-size: 20px;
+    }
 
+    .Tablepopular th,
+    .Tablepopular td {
+        font-size: 1rem;
+    }
 
+    footer {
+        font-size: 1rem;
+    }
+}
+
+/* Адаптивность для экрана шириной 400px */
+@media (max-width: 400px) {
+    .EdaPict {
+        width: 350px;
+        height: 250px;
+        margin-top: 110px;
+    }
+
+    .Tablepopular {
+        font-size: 0.9rem;
+    }
+
+    .Tablepopular {
+        overflow-x: auto;
+        display: block;
+        width: 100%;
+    }
+}

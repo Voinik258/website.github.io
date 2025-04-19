@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Оформить заказ - Food Construct</title>
+    <link rel="stylesheet" href="stylezakaz.css"/>
+</head>
+<body>
+    <header>
+        <h1>Food Construct</h1>
+        <nav>
+            <a class="HL" href="index.html">О нас</a>
+            <a class="HL" href="zakaz.html">Собрать ланч</a>
+            <a class="HL" href="order.html">Оформить заказ</a>
+            <a class="HL" href="#contact-phone">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Ваш заказ</h2>
+        <div id="order-summary">
+            <h3>Выбранные блюда</h3>
+            <ul id="selected-items">
+                <!-- Сюда будут добавляться выбранные блюда -->
+            </ul>
+            <p><strong>Текущая стоимость: </strong><span id="total-price">0</span> </p>
+        </div>
+    
+        <section class="order-form">
+            <h2>Оформление заказа</h2>
+            <form id="order-form">
+                <div>
+                    <input type="text" name="first_name" placeholder="Имя" required>
+                </div>
+                <div>
+                    <input type="text" name="last_name" placeholder="Фамилия" required>
+                </div>
+                <div>
+                    <input type="text" name="middle_name" placeholder="Отчество" required>
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <input type="tel" name="phone" placeholder="Телефон" required>
+                </div>
+                <div>
+                    <input type="text" name="delivery_address" placeholder="Адрес доставки" required>
+                </div>
+              
+                <label>
+                  <input type="radio" name="delivery_type" value="now" checked> Как можно скорее
+                </label>
+                <label>
+                  <input type="radio" name="delivery_type" value="by_time"> По времени
+                </label>
+              
+                <input type="time" name="delivery_time"> <!-- Используется только если delivery_type=by_time -->
+              
+                <textarea name="comment" placeholder="Комментарий"></textarea>
+              
+                <label>
+                  <input type="checkbox" name="subscribe"> Подписаться на рассылку
+                </label>
+              
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+    
+
+    <footer>
+        <p id="contact-phone">
+            Позвоните нам <a class="HL" href="tel:+70000000000">+7-000-000-00-00</a>
+        </p>
+    </footer>
+
+    <script src="orderData.js"></script>
+    <script src="ordervalidation.js"></script>
+</body>
+</html>

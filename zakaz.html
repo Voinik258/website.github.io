@@ -3,118 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Собрать ланч - Food Construct</title>
     <link rel="stylesheet" href="stylezakaz.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <title>Собрать ланч</title>
 </head>
-
 <body>
-
     <header>
         <h1>Food Construct</h1>
         <nav>
-            <a class="HL" href="Site.html">О нас</a>
-            <a class="HL active" href="zakaz.html">Собрать ланч</a> <!-- Добавлен класс active -->
-            <a class="HL" href="#">Заказы</a>
-            <a class="HL" href="#phone">Контакты</a>
+            <a class="HL" href="index.html">О нас</a>
+            <a class="HL" href="zakaz.html">Собрать ланч</a>
+            <a class="HL" href="order.html">Оформить заказ</a>
+            <a class="HL" href="#contact-phone">Контакты</a>
         </nav>
     </header>
 
     <main>
-        <!-- СУПЫ -->
-        <section>
-            <h2>Супы</h2>
-            <div class="menu-grid">
-                <div class="dish">
-                    <img src="zakaz_pict/harcho.jpg" alt="">
-                    <p class="price">300 руб</p>
-                    <p class="name">Суп Харчо</p>
-                    <p class="weight">300 мл</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="zakaz_pict/borsh.jpg" alt="">
-                    <p class="price">250 руб</p>
-                    <p class="name">Борщ</p>
-                    <p class="weight">350 мл</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="zakaz_pict/kurica.jpg" alt="">
-                    <p class="price">280 руб</p>
-                    <p class="name">Куриный суп</p>
-                    <p class="weight">300 мл</p>
-                    <button>Добавить</button>
-                </div>
-            </div>
-        </section>
+        <h2>Соберите ваш ланч</h2>
+        <div id="menu">
+            <!-- Здесь будут отображаться блюда, загруженные через API -->
+        </div>
 
-        <!-- ГЛАВНОЕ БЛЮДО -->
-        <section>
-            <h2>Главные блюда</h2>
-            <div class="menu-grid">
-                <div class="dish">
-                    <img src="zakaz_pict/kotlpure.jpg" alt="">
-                    <p class="price">450 руб</p>
-                    <p class="name">Котлеты с пюре</p>
-                    <p class="weight">350 г</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="zakaz_pict/steak.jpg" alt="">
-                    <p class="price">520 руб</p>
-                    <p class="name">Стейк с овощами</p>
-                    <p class="weight">400 г</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="zakaz_pict/fish.jpg" alt="">
-                    <p class="price">480 руб</p>
-                    <p class="name">Рыба на гриле</p>
-                    <p class="weight">350 г</p>
-                    <button>Добавить</button>
-                </div>
-            </div>
-        </section>
-
-<!-- НАПИТКИ -->
-        <section>
-            <h2>Напитки</h2>
-            <div class="menu-grid">
-                <div class="dish">
-                    <img src="zakaz_pict/coffe.jpg" alt="">
-                    <p class="price">150 руб</p>
-                    <p class="name">Кофе</p>
-                    <p class="weight">250 мл</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="zakaz_pict/tea.jpg" alt="">
-                    <p class="price">120 руб</p>
-                    <p class="name">Чай</p>
-                    <p class="weight">200 мл</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="zakaz_pict/cok.jpg" alt="">
-                    <p class="price">180 руб</p>
-                    <p class="name">Свежевыжатый сок</p>
-                    <p class="weight">300 мл</p>
-                    <button>Добавить</button>
-                </div>
-            </div>
-        </section>
+        <div id="order-panel" class="hidden">
+            <div id="selected-items"></div>
+            <div id="total-price" style="font-weight: bold; margin-top: 10px;"></div>
+            <button id="go-to-order">Оформить заказ</button>
+        </div>
     </main>
-
     <footer>
-        <p id="phone">
+        <p id="contact-phone">
             Позвоните нам
-            <a class="HL" href="">
-                +7-000-000-00-00
-            </a>
+            <a class="HL" href="tel:+70000000000">+7-000-000-00-00</a>
         </p>
-            </footer>
+    </footer>
+    
+
+    <script src="zakazData.js"></script>
 </body>
 </html>

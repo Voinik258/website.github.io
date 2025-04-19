@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
         try {
             console.log("Данные, отправляемые на сервер:", payload);
-            const response = await fetch("http://lab8-api.std-900.ist.mospolytech.ru", 
+            const response = await fetch("https://edu.std-900.ist.mospolytech.ru", 
                 
                 {
                 method: "POST",

@@ -7,7 +7,7 @@ async function displayMenu()
     try 
     {
         // Получение блюд по API
-        const response = await fetch('http://lab7-api.std-900.ist.mospolytech.ru/api/dishes');
+        const response = await fetch('https://lab7-api.std-900.ist.mospolytech.ru/api/dishes');
         
         
         // Проверка на успешности запроса
